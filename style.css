@@ -140,6 +140,5 @@ body{
 }
 
 .button button:hover{
-    background: #ababab;
-    color: #fff;
+    color: red;
 }
