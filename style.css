@@ -16,7 +16,7 @@ body{
     top: 33%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1000px;
+    width: 67%;
     height: 600px;
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
@@ -146,11 +146,15 @@ body{
 }
 
 .image-pick-gallery {
+    margin: 0 auto;
+    width: 67%;
     height: 8vh;
     box-sizing: border-box;
     color: black;
-    border-bottom: 5px solid black;
     border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    position: relative;
 }
 .sort{
     display: flex;
@@ -160,7 +164,8 @@ body{
     font-size: 20px;
     margin-left: auto;
     margin-right: 0;
-    border-left: 3px solid #000;
+    border-left: 5px solid #000;
+    border-right: 5px solid #000;
     justify-content: center;
     cursor: pointer;
 }
@@ -171,15 +176,50 @@ body{
 }
 .gallery {
     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 67%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-evenly;
 }
 .image-template {
-    width: 10vw;
+    width: 23.2%;
     height: 10vw;
     border: 5px solid black;
     border-radius: 5px;
     cursor: pointer;
+}
+.sort-content {
+    box-sizing: border-box;
+    margin-top: 5px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    position: absolute;
+    right: 0;
+    top: 6.9vh;
+    width: 20vw;
+    background-color: white;
+    cursor: default;
+}
+.c-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+.country-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 90%;
+    margin-left: auto;
+}
+.country h2 {
+    margin-left: 10px;
+}
+#c {
+    width: 50px;
+    height: 50px;
 }
