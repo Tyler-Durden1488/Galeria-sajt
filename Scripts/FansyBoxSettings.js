@@ -23,7 +23,6 @@ Fancybox.bind('[data-fancybox', {
             middle: [
                 "zoomIn",
                 "zoomOut",
-                "toggle1to1",
                 "rotateCCW",
                 "rotateCW",
                 "flipX",
@@ -32,7 +31,4 @@ Fancybox.bind('[data-fancybox', {
             right: ["fullscreen","download", "close"],
         },
     },
-    
-
-
 });    
