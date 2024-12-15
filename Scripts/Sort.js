@@ -51,18 +51,18 @@ sortc.onclick = function (event){
 sort.onclick = function (event){
     event.stopPropagation();
     if(!clicked){
-        sortc.style.display = "block";
+        sortc.style.maxHeight = "350px";
         sortc.style.opacity = 1;
         clicked = true;
     }
     else {
-        sortc.style.display = "none";
         sortc.style.opacity = 0;
+        sortc.style.maxHeight = 0;
         clicked = false;
     }
 }
 window.onclick = function() {
-    sortc.style.display = "none";
     sortc.style.opacity = 0;
+    sortc.style.maxHeight = 0;
     clicked = false
 }
