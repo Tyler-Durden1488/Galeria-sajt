@@ -1,7 +1,7 @@
 buttons = Array.from(document.getElementsByClassName("button")[0].children);
 bg = document.getElementsByClassName("bg");
 slides = document.getElementsByClassName("slide")[0].children;
-first = true;
+var first = true;
 buttons.forEach(button => {
     button.onclick = function() {
         if(first){
