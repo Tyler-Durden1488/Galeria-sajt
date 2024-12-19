@@ -13,7 +13,7 @@ Fancybox.bind('[data-fancybox', {
         Panzoom: {
             panMode: "mousemove",
             mouseMoveFactor: 1.1,
-            mouseMoveFriction: 0.12
+            mouseMoveFriction: 0.12,
         },
     },
 
