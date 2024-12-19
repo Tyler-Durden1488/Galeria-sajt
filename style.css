@@ -102,7 +102,7 @@ body{
 }
 
 .item:nth-child(2), .item:nth-child(1){
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.116);
     background-blend-mode: darken;
 }
 
@@ -316,7 +316,7 @@ footer h3 {
     padding-top: 15px;
     cursor: pointer;
 }
-.SeeOnMap a:visited{
+.SeeOnMap a:visited, a:link, a:active{
 	color:white;
 }
 .icons_container img{
