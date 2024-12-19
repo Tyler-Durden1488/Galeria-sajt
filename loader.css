@@ -1,0 +1,50 @@
+.loader {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.loader > div {
+	width: 33%;
+	height: 33%;
+	background-color: white;
+	float: left;
+	animation: cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.loader .cube1 {
+	animation-delay: 0.2s;
+}
+.loader .cube2 {
+	animation-delay: 0.3s;
+}
+.loader .cube3 {
+	animation-delay: 0.4s;
+}
+.loader .cube4 {
+	animation-delay: 0.1s;
+}
+.loader .cube5 {
+	animation-delay: 0.2s;
+}
+.loader .cube6 {
+	animation-delay: 0.3s;
+}
+.loader .cube7 {
+	animation-delay: 0s;
+}
+.loader .cube8 {
+	animation-delay: 0.1s;
+}
+.loader .cube9 {
+	animation-delay: 0.2s;
+}
+@keyframes cubeGridScaleDelay {
+	0%, 70%, 100% {
+		transform: scale3D(1, 1, 1);
+	}
+	35% {
+		transform: scale3D(0, 0, 1);
+	}
+}
