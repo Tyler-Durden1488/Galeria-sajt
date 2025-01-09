@@ -6,6 +6,7 @@ items.forEach(item => {
         image.setAttribute("src", item.style.backgroundImage.slice(5,-2));
         imageViewer.style.visibility = "visible";
         imageViewer.style.opacity = 1;
+        downloadLink.setAttribute("href", item.style.backgroundImage.slice(5,-2));
     }
 });
 
@@ -14,11 +15,11 @@ let leftPressed = false;
 const scalingSpeed = 0.01;
 var maxLeft = 60, maxTop = 60;
 var xDown = null, yDown = null, xImage = 0, yImage = 0, scale = 1;
-main.onmousedown = (nigger) => {
-    if(!nigger.button) {
+main.onmousedown = (event) => {
+    if(!event.button) {
         leftPressed = true;
-        xDown = nigger.offsetX - image.offsetLeft;
-        yDown = nigger.offsetY - image.offsetTop;
+        xDown = event.offsetX - image.offsetLeft;
+        yDown = event.offsetY - image.offsetTop;
         main.style.cursor = 'grabbing';
     }
 }
@@ -26,27 +27,27 @@ document.onmouseup = () => {
     leftPressed = false;
     main.style.cursor = 'grab';
 }
-main.onmousemove = (nigger) => {
+main.onmousemove = (event) => {
     if(leftPressed) {
         bounds = image.getBoundingClientRect();
 
-        xImage = nigger.offsetX - xDown;
-        yImage = nigger.offsetY - yDown;
+        xImage = event.offsetX - xDown;
+        yImage = event.offsetY - yDown;
 
         console.log("x: " + xImage + " | y:" + yImage);
         image.style.left = `${xImage}px`;
         image.style.top = `${yImage}px`;
     }
 }
-main.onwheel = (nigger) => {
-    nigger.preventDefault();
-    scale += nigger.deltaY * -scalingSpeed;
+main.onwheel = (event) => {
+    event.preventDefault();
+    scale += event.deltaY * -scalingSpeed;
     scale = Math.min(Math.max(1, scale), 5)
     if(rotation == 0 || !(rotation%360)){
         const rect = image.getBoundingClientRect();
 
-        const mouseX = nigger.offsetX - rect.left;
-        const mouseY = nigger.offsetY - rect.top;
+        const mouseX = event.offsetX - rect.left;
+        const mouseY = event.offsetY - rect.top;
     
         const originX = (mouseX / rect.width) * 100;
         const originY = (mouseY / rect.height) * 100;
@@ -73,6 +74,8 @@ var rotateRight = document.querySelector(".rotate-right");
 var toFull = document.querySelector(".to-full");
 var resizeByWidth = document.querySelector(".resize-by-width");
 var close = document.querySelector(".close-icon");
+var download = document.querySelector(".download");
+var downloadLink = document.getElementById("download-link");
 var rotation = 0;
 zoomIn.onclick = () =>{
     scale+=0.1;
